@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+/* ## Colors
+
+ Primary */
+
+--Green-500: hsl(158, 36%, 37%);
+--Green-700: hsl(158, 42%, 18%);
+
+/* ### Neutral */
+
+--Black: hsl(212, 21%, 14%);
+--Grey: hsl(228, 12%, 48%);
+--Cream: hsl(30, 38%, 92%);
+--White: hsl(0, 0%, 100%);
+
+--Font-size-paragraph: 14px;
+
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--Cream);
+margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

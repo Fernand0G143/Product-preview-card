@@ -1,0 +1,13 @@
+.productcontainer {
+    background: var(--White);
+    width: 95vw;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  
+}
+
