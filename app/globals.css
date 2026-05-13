@@ -19,20 +19,14 @@
 
 }
 
+@media screen and (min-width: 1440px) {
 
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f2ebe3; /* El color crema del diseño */
 }
 
-body {
-  background: var(--Cream);
-margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

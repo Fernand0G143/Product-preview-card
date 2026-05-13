@@ -4,19 +4,31 @@ import ProductDetails from "@/components/ProductDetails";
 import  BuySection  from "@/components/BuySection"; 
 import "@/components/ProductCard.css";
 
-const ProductCard = () => {
-  const imagenproducto = "/image-product-mobile.jpg";
+interface Props{
+        product:product
+}
+
+// ProductCard.tsx
+const ProductCard = ({product}:Props) => {
+  // const imagenproducto = "/image-product-mobile.jpg";
+  
   return (
     <div className="productcontainer">
-      <Image
-        src={imagenproducto}
-        alt="Imagen del producto"
-        width={350}
-        height={350}
-      />
-      <ProductDetails />
-      <PriceSection />
-      <BuySection />
+      <div className="imagecontainer">
+        <img
+          src={product.image} 
+          alt="Imagen del producto" 
+          //fill
+          style={{ objectFit: "cover" }} 
+        />
+      </div>
+
+      {/* Agrupa el contenido aquí */}
+      <div className="contentcontainer">
+        <ProductDetails categoria={product.category} title={product.title} description={product.description}/>
+        <PriceSection newPrice={product.newPrice} oldPrice={product.oldPrice}/>
+        <BuySection />
+      </div>
     </div>
   );
 };
